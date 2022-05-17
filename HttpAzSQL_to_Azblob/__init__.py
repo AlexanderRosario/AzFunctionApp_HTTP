@@ -13,7 +13,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     conn = connection()
     name = req.params.get('name')
     cedula = req.params.get('cedula')
-
+    
     dataset = select(conn ,name,cedula)
 
     if not dataset :
